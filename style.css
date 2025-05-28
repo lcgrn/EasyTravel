@@ -1,0 +1,176 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Segoe UI", sans-serif;
+    line-height: 1.6;
+    background: #f2f2f2;
+    color: #333;
+  }
+  
+  /* HEADER */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #004080;
+    padding: 1rem 2rem;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+  
+  /* HERO SECTION */
+  .hero {
+    background-image: url('https://source.unsplash.com/1600x800/?travel,nature');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    position: relative;
+    color: white;
+  }
+  
+  .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .search-bar {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .search-bar input,
+  .search-bar button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .search-bar input {
+    width: 300px;
+  }
+  
+  .search-bar button {
+    background: #ffcc00;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  /* FEATURES SECTION */
+  .features {
+    padding: 4rem 2rem;
+    background: white;
+    text-align: center;
+  }
+  
+  .cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  
+  .card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    overflow: hidden;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card h3 {
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .card p {
+    padding: 0 1rem 1rem;
+  }
+  
+  /* REGISTER SECTION */
+  .register {
+    background: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .register form {
+    margin-top: 1.5rem;
+    max-width: 400px;
+    margin-inline: auto;
+  }
+  
+  .register input,
+  .register button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .register button {
+    background: #004080;
+    color: white;
+    font-weight: bold;
+    border: none;
+  }
+  
+  /* FOOTER */
+  footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 1rem;
+  }
+  
