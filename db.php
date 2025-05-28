@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$db   = 'easytravel';
+$db   = 'travel_booking';
 $user = 'root';
 $pass = 'Shapy_tot1';  // Laisser vide si pas de mot de passe (ou mets le tien ici)
 $charset = 'utf8mb4';
