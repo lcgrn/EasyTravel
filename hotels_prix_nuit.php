@@ -11,6 +11,12 @@ try {
     die("Erreur de connexion : " . $e->getMessage());
 }
 
+/*What the file is doing:
+> Displays 4-star and higher hotels (using the top_hotels view)
+> llows the user to select a number of nights
+> Uses the SQL function total_price_per_stay to calculate the total price
+> Uses a form to dynamically update*/
+
 // Récupérer le nombre de nuits depuis le formulaire, valeur par défaut : 3
 $nights = isset($_GET['nights']) ? (int)$_GET['nights'] : 3;
 
