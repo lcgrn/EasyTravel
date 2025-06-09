@@ -41,6 +41,12 @@ $hotels = $stmt->fetchAll(PDO::FETCH_ASSOC);
       margin-bottom: 40px;
       color: #333;
     }
+    h2 {
+      text-align: center;
+      color: #222;
+      font-size: 1.3rem;
+      padding : 10px
+    }
 
     .hotel-list {
       display: grid;
@@ -69,11 +75,38 @@ $hotels = $stmt->fetchAll(PDO::FETCH_ASSOC);
     .stars {
       color: #f5a623;
     }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-right a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
+    .nav-right button {
+  background-color: #000;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
   </style>
 </head>
 <body>
 
 <h1>Available Hotels</h1>
+<h2>Our luxury hotels: 3 ⭐️ and more</h2>
+
+<div class="nav-right">
+    <button onclick="window.location.href='index.html'">Home page</button>
+</div>
 
 <div class="hotel-list">
   <?php foreach ($hotels as $hotel): ?>

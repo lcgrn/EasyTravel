@@ -58,10 +58,34 @@ $hotels = $stmt->fetchAll();
     form {
       margin-bottom: 30px;
     }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-right a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
+    .nav-right button {
+  background-color: #000;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
   </style>
 </head>
 <body>
   <h1>Top Rated Hotels</h1>
+  <div class="nav-right">
+    <button onclick="window.location.href='index.html'">Home page</button>
+</div>
+
 
   <form method="GET">
     <label for="nights">Number of nights:</label>
