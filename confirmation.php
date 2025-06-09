@@ -12,7 +12,6 @@ try {
 
 // Get booking ID from URL
 $bookingId = isset($_GET['booking_id']) ? (int)$_GET['booking_id'] : 0;
-
 if ($bookingId === 0) {
     die("Invalid booking.");
 }
@@ -25,7 +24,8 @@ $sql = "SELECT
             f.departure_date,
             f.arrival_date,
             f.price AS flight_price,
-            b.booking_date
+            b.booking_date,
+            b.nights
         FROM Booking b
         JOIN Flight f ON b.Flight_id = f.id
         JOIN Hotel h ON b.Hotel_id = h.id
@@ -39,7 +39,16 @@ if (!$data) {
     die("Booking not found.");
 }
 
-$total_price = $data['price_per_night'] + $data['flight_price'];
+// Use the SQL function to calculate total hotel price
+$priceStmt = $pdo->prepare("SELECT total_price_per_stay(:price, :nights) AS hotel_total");
+$priceStmt->execute([
+    'price' => $data['price_per_night'],
+    'nights' => $data['nights']
+]);
+$priceResult = $priceStmt->fetch();
+
+$hotel_total = $priceResult['hotel_total'];
+$total_price = $hotel_total + $data['flight_price'];
 ?>
 
 <!DOCTYPE html>
@@ -114,13 +123,18 @@ $total_price = $data['price_per_night'] + $data['flight_price'];
   <div class="card">
     <div class="icon">🎉</div>
     <h1>Your booking is confirmed!</h1>
-    <p>Thank you for choosing EasyTravel. Here are the details of your trip:</p>
+    <p>Thank you for choosing EasyTravel. Here are your trip details:</p>
 
     <div class="details">
       <p><span class="highlight">Booking Date:</span> <?= htmlspecialchars($data['booking_date']) ?></p>
       <p><span class="highlight">Hotel:</span> <?= htmlspecialchars($data['hotel_name']) ?> (<?= number_format($data['price_per_night'], 2) ?> € / night)</p>
+      <p><span class="highlight">Number of nights:</span> <?= htmlspecialchars($data['nights']) ?></p>
+      <p><span class="highlight">Hotel Total:</span> <?= number_format($hotel_total, 2) ?> €</p>
       <p><span class="highlight">Flight:</span> <?= htmlspecialchars($data['airline']) ?> — <?= htmlspecialchars($data['departure_date']) ?> ➡️ <?= htmlspecialchars($data['arrival_date']) ?> (<?= number_format($data['flight_price'], 2) ?> €)</p>
       <p><span class="highlight">Total Price:</span> <strong><?= number_format($total_price, 2) ?> €</strong></p>
     </div>
 
-    <a href="index.html" class="btn-home">Return to homep
+    <a href="index.html" class="btn-home">Return to homepage</a>
+  </div>
+</body>
+</html>

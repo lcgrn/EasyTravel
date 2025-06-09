@@ -27,19 +27,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $userId = 1;
     $flightId = $_POST['flight_id'] ?? null;
     $hotelId = $_POST['hotel_id'] ?? null;
+    $nights = isset($_POST['nights']) ? (int) $_POST['nights'] : 1;
 
-    if ($flightId && $hotelId) {
-        $stmt = $pdo->prepare("INSERT INTO Booking (booking_date, User_id, Flight_id, Hotel_id) 
-                               VALUES (CURDATE(), ?, ?, ?)");
-        if ($stmt->execute([$userId, $flightId, $hotelId])) {
-            $bookingId = $pdo->lastInsertId(); // Récupère l’ID de la réservation insérée
-            header("Location: confirmation.php?booking_id=" . $bookingId); // Redirection avec paramètre
+    if ($flightId && $hotelId && $nights > 0) {
+        $stmt = $pdo->prepare("INSERT INTO Booking (booking_date, User_id, Flight_id, Hotel_id, nights) 
+                               VALUES (CURDATE(), ?, ?, ?, ?)");
+        if ($stmt->execute([$userId, $flightId, $hotelId, $nights])) {
+            $bookingId = $pdo->lastInsertId();
+            header("Location: confirmation.php?booking_id=" . $bookingId);
             exit;
         } else {
             $message = "❌ An error occurred. Please try again.";
         }
     } else {
-        $message = "⚠️ Please select both a flight and a hotel.";
+        $message = "⚠️ Please select a flight, hotel and number of nights.";
     }
 }
 ?>
@@ -89,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       margin-bottom: 10px;
     }
 
-    select, button {
+    select, input, button {
       width: 100%;
       padding: 14px;
       font-size: 1rem;
@@ -172,6 +173,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </option>
       <?php endforeach; ?>
     </select>
+
+    <label for="nights">🛎️ Number of nights</label>
+    <input type="number" name="nights" id="nights" min="1" value="3" required>
 
     <button type="submit">🧳 Confirm Booking</button>
   </form>
