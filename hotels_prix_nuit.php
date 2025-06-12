@@ -21,7 +21,7 @@ try {
 $nights = isset($_GET['nights']) ? (int)$_GET['nights'] : 3;
 
 // Récupérer les hôtels depuis la view
-$stmt = $pdo->query("SELECT name, stars, price_per_night FROM top_hotels");
+$stmt = $pdo->query("SELECT name, stars, price_per_night FROM hotel");
 $hotels = $stmt->fetchAll();
 ?>
 
@@ -81,7 +81,7 @@ $hotels = $stmt->fetchAll();
   </style>
 </head>
 <body>
-  <h1>Top Rated Hotels</h1>
+  <h1>Hotels - best price per night</h1>
   <div class="nav-right">
     <button onclick="window.location.href='index.html'">Home page</button>
 </div>

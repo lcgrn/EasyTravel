@@ -9,20 +9,12 @@
 </head>
 <body>
   <header>
-    <div class="menu">
-      <button class="menu-button">☰ Menu</button>
-      <div class="dropdown">
-        <a href="#">Destinations</a>
-        <a href="#">Ideas</a>
-      </div>
-    </div>
     <div class="logo">EasyTravel</div>
     <div class="nav-right">
       <a href="#">Destinations</a>
       <a href="#">Inspirations</a>
       <button onclick="window.location.href='login.html'">Log in</button>
       <a href="about.html">About us</a>
-
     </div>
   </header>
 
@@ -31,10 +23,31 @@
     <p>Tailor-made suggestions according to the season, your tastes, and your budget</p>
     <div class="search-box">
       <input type="text" placeholder="Where do you want to go?">
-      <button>Search</button>
+      <button >Search</button>
     </div>
   </section>
 
+
+  <!-- ✨ NEW - Popular Destinations -->
+  <section class="popular-destinations">
+    <h2>Popular Destinations</h2>
+    <div class="dest-grid">
+      <div class="dest-card">
+        <img src="Images/paris.png" alt="Paris">
+        <h3>Paris</h3>
+      </div>
+      <div class="dest-card">
+        <img src="Images/tokyo.png" alt="Tokyo">
+        <h3>Tokyo</h3>
+      </div>
+      <div class="dest-card">
+        <img src="Images/newyork.png" alt="New York">
+        <h3>New York</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Existing Highlights Section -->
   <section class="section">
     <div class="card">
       <img src="https://images.unsplash.com/photo-1500051638674-ff996a0ec29e" alt="Cabin">
@@ -50,6 +63,7 @@
     </div>
   </section>
 
+  <!-- Hotel Banner (conserved) -->
   <section class="booking-banner hotel-banner">
     <div class="hotel-banner-content">
       <h2>Plan your perfect stay</h2>
@@ -62,10 +76,15 @@
     </div>
   </section>
 
+  <!-- Sign Up CTA -->
   <section class="register-section">
     <h2>New here?</h2>
     <p>Register now and start planning your next adventure!</p>
     <button onclick="window.location.href='register.html'">Sign Up</button>
   </section>
+
+  <footer class="simple-footer">
+    © 2025 EasyTravel — All right reserved.
+  </footer>
 </body>
 </html>

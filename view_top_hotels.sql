@@ -1,5 +1,16 @@
 CREATE OR REPLACE VIEW top_hotels AS
-SELECT id, name, stars, price_per_night
-FROM Hotel
-WHERE stars >= 2
-ORDER BY stars DESC;
+SELECT 
+    Hotel.id,
+    Hotel.name,
+    Hotel.stars,
+    Hotel.price_per_night,
+    Destination.city,
+    Destination.country
+FROM 
+    Hotel
+JOIN 
+    Destination ON Hotel.Destination_id = Destination.id
+WHERE 
+    Hotel.stars >= 2
+ORDER BY 
+    Hotel.stars DESC;

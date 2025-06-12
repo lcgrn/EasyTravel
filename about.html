@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us - Custom Travel</title>
+  <title>À propos - EasyTravel</title>
   <style>
     body {
-      font-family: 'Georgia', serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Georgia', serif;
+      background-color: #f8f5f2;
+      color: #3b2f2f;
     }
 
     .navbar {
@@ -16,43 +17,87 @@
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid #ddd;
+      background-color: #fff8f4;
     }
 
     .logo {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
+      font-weight: bold;
     }
 
     .nav-links a {
-      margin-right: 1rem;
+      margin-left: 1rem;
       text-decoration: none;
-      color: #000;
+      color: #5a3b2e;
+      font-weight: 500;
     }
 
-    .btn {
-      background-color: #b7412c;
-      color: white;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
-      border-radius: 20px;
-    }
-
-    .about-section {
+    .about-hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
       padding: 4rem 2rem;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
+      background-color: #fff4ed;
     }
 
-    .about-section h1 {
-      font-size: 2rem;
+    .about-text, .about-image {
+      flex: 1 1 400px;
+      margin: 1rem;
+      max-width: 500px;
+    }
+
+    .about-text h1 {
+      font-size: 2.5rem;
       margin-bottom: 1rem;
+      color: #8b3e2f;
     }
 
-    .about-section p {
+    .about-text p {
       font-size: 1.1rem;
+      line-height: 1.7;
+      color: #5a3b2e;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 3rem 2rem;
+    }
+
+    .card {
+      background-color: #f1e7df;
+      border-radius: 15px;
+      padding: 2rem;
+      color: #3b2f2f;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+      color: #7c4229;
+    }
+
+    .card p {
+      font-size: 1rem;
       line-height: 1.6;
-      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background-color: #fff8f4;
+      color: #7a5a4e;
     }
   </style>
 </head>
@@ -60,9 +105,9 @@
 
   <header>
     <nav class="navbar">
-      <div class="logo"> EasyTravel</div>
+      <div class="logo">EasyTravel</div>
       <div class="nav-links">
-        <a href="index.html">Home</a>
+        <a href="index.html">Accueil</a>
         <a href="#">Destinations</a>
         <a href="#">Inspirations</a>
       </div>
@@ -70,19 +115,40 @@
   </header>
 
   <main>
-    <section class="about-section">
-      <h1>About Us</h1>
-      <p>
-        At Custom Travel, we believe every journey should be unique. Our team of over 250 dedicated travel advisors 
-        works with you to craft personalized travel experiences tailored to your dreams. Whether you're planning 
-        a romantic getaway, an adventurous expedition, or a cultural tour, we’re here to make it unforgettable.
-      </p>
-      <p>
-        With years of experience and a global network of trusted partners, we ensure that every detail is 
-        taken care of. Let us take you on a journey where the only thing you need to do is enjoy the ride.
-      </p>
+    <section class="about-hero">
+      <div class="about-text">
+        <h1>Notre vision du voyage</h1>
+        <p>
+          Chez EasyTravel, chaque voyage est conçu comme une œuvre unique. Grâce à notre équipe de passionnés, nous composons des séjours sur-mesure, pensés pour correspondre à vos envies, vos rythmes, et vos émotions.
+        </p>
+        <p>
+          Voyager, pour nous, c’est découvrir autrement, prendre le temps, s’émerveiller et surtout vivre une expérience humaine, culturelle et sensorielle inoubliable.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1000&q=80" alt="Voyage en mer">
+      </div>
+    </section>
+
+    <section class="section-grid">
+      <div class="card">
+        <h2>Une entreprise engagée</h2>
+        <p>Nous développons des services éthiques, personnalisés et humains. Chaque voyage respecte la culture locale et l’environnement.</p>
+      </div>
+      <div class="card">
+        <h2>Des éclaireurs hors pair</h2>
+        <p>Nos conseillers sont des experts des destinations qu’ils proposent, souvent natifs ou passionnés du pays, pour une immersion totale.</p>
+      </div>
+      <div class="card">
+        <h2>Un monde de services</h2>
+        <p>Conciergerie 24/7, voyages en train ou à vélo, expériences authentiques : nous adaptons l’itinéraire à vos valeurs et votre rythme.</p>
+      </div>
     </section>
   </main>
+
+  <footer>
+    © 2025 EasyTravel — All right reserved.
+  </footer>
 
 </body>
 </html>

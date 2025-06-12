@@ -5,9 +5,7 @@ AFTER INSERT ON Flight
 FOR EACH ROW
 BEGIN
   DECLARE hotel_id INT;
-  DECLARE nights INT DEFAULT 3; -- valeur par défaut si non fournie ailleurs
-
-  -- Sélection d’un hôtel pour la même destination
+  DECLARE nights INT DEFAULT 3; -- default value if not specifie somewhere else 
   SELECT id INTO hotel_id
   FROM Hotel
   WHERE Destination_id = NEW.Destination_id

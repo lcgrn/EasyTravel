@@ -11,12 +11,9 @@ try {
     die("Erreur de connexion : " . $e->getMessage());
 }
 
-// Requête pour récupérer les hôtels + destination
-$sql = "
-SELECT h.name, h.stars, h.price_per_night, d.city, d.country
-FROM hotel h
-JOIN destination d ON h.destination_id = d.id
-";
+// Requête pour récupérer la VIEW
+$sql = "SELECT name, stars, price_per_night, city, country FROM top_hotels";
+
 
 $stmt = $pdo->query($sql);
 $hotels = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -102,7 +99,7 @@ $hotels = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
 
 <h1>Available Hotels</h1>
-<h2>Our luxury hotels: 3 ⭐️ and more</h2>
+<h2>✨ 🌴 Our luxury hotels 🌴 ✨ </h2>
 
 <div class="nav-right">
     <button onclick="window.location.href='index.html'">Home page</button>
