@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paris - EasyTravel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #f8f5f2;
+      color: #3b2f2f;
+    }
+
+    header {
+      background-color: #fff8f4;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #8b3e2f;
+    }
+
+    .nav-links a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #5a3b2e;
+      font-weight: 500;
+    }
+
+    .hero-paris {
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e6/Paris_Night.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 6rem 2rem;
+      text-align: center;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    }
+
+    .hero-paris h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-paris p {
+      font-size: 1.2rem;
+    }
+
+    .quote {
+      text-align: center;
+      font-style: italic;
+      margin: 3rem 2rem;
+      color: #7a5a4e;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: #f1e7df;
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .card h2 {
+      color: #7c4229;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background-color: #fff8f4;
+      color: #7a5a4e;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">EasyTravel</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#">Destinations</a>
+      <a href="#">Inspirations</a>
+    </div>
+  </header>
+
+  <section class="hero-paris">
+    <h1>Discover Paris</h1>
+    <p>The city of lights, love and timeless beauty</p>
+  </section>
+
+  <section class="quote">
+    <p>“Paris is always a good idea.” – Audrey Hepburn</p>
+  </section>
+
+  <section class="section-grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Eiffel Tower">
+      <h2>Eiffel Tower</h2>
+      <p>Enjoy breathtaking views from the top of Paris’s iconic monument.</p>
+    </div>
+    <div class="card">
+      <img src="Images/montmartre.png" alt="Montmartre">
+      <h2>Montmartre</h2>
+      <p>Stroll through charming streets filled with art, cafés, and history.</p>
+    </div>
+    <div class="card">
+      <img src="Images/paris.png" alt="Seine river">
+      <h2>Seine River</h2>
+      <p>Take a boat cruise at sunset and see Paris from a new perspective.</p>
+    </div>
+  </section>
+
+  <section class="quote">
+    <p>“To know Paris is to know a great deal.” – Henry Miller</p>
+  </section>
+
+  <footer>
+    © 2025 EasyTravel — All rights reserved.
+  </footer>
+
+</body>
+</html>

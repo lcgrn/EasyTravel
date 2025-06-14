@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inspiration - EasyTravel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #f8f5f2;
+      color: #3b2f2f;
+    }
+
+    header {
+      background-color: #fff8f4;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e4dcd4;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #8b3e2f;
+    }
+
+    .nav-links a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #5a3b2e;
+      font-weight: 500;
+    }
+
+    .intro {
+      text-align: center;
+      padding: 3rem 2rem 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .intro h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: #7c4229;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      color: #5a3b2e;
+    }
+
+    .filters {
+      text-align: center;
+      margin: 1.5rem auto;
+    }
+
+    .filters button {
+      margin: 0.3rem;
+      padding: 0.6rem 1rem;
+      border: none;
+      background-color: #e4dcd4;
+      color: #5a3b2e;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+    }
+
+    .filters button.active,
+    .filters button:hover {
+      background-color: #7c4229;
+      color: #fff8f4;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: #f1e7df;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .card-content h3 {
+      margin: 0.5rem 0;
+      font-size: 1.3rem;
+      color: #7c4229;
+    }
+
+    .card-content p {
+      font-style: italic;
+      font-size: 0.95rem;
+      color: #5a3b2e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background-color: #fff8f4;
+      color: #7a5a4e;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">EasyTravel</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#">Destinations</a>
+      <a href="#">Contact</a>
+    </div>
+  </header>
+
+  <section class="intro">
+    <h1>Find Your Next Inspiration</h1>
+    <p>Explore unique travel ideas by theme and region. Whether you dream of mountains, deserts, bustling cities or peaceful beaches — start your next adventure here.</p>
+  </section>
+
+  <section class="filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="nature">Nature</button>
+    <button class="filter-btn" data-filter="mountains">Mountains</button>
+    <button class="filter-btn" data-filter="city">City</button>
+    <button class="filter-btn" data-filter="beach">Beach</button>
+    <button class="filter-btn" data-filter="europe">Europe</button>
+    <button class="filter-btn" data-filter="asia">Asia</button>
+    <button class="filter-btn" data-filter="africa">Africa</button>
+    <button class="filter-btn" data-filter="america">America</button>
+  </section>
+
+  <section class="grid" id="cardGrid">
+    <div class="card" data-category="nature europe">
+      <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b" alt="Nature">
+      <div class="card-content">
+        <h3>Nature Escapes</h3>
+        <p>Forests, lakes, silence.</p>
+      </div>
+    </div>
+
+    <div class="card" data-category="mountains europe">
+      <img src="https://images.unsplash.com/photo-1574169208507-84376144848b" alt="Mountains">
+      <div class="card-content">
+        <h3>Mountain Adventures</h3>
+        <p>Reach new heights.</p>
+      </div>
+    </div>
+
+    <div class="card" data-category="city america">
+      <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba" alt="City Life">
+      <div class="card-content">
+        <h3>City Breaks</h3>
+        <p>Culture, cafés & creativity.</p>
+      </div>
+    </div>
+
+    <div class="card" data-category="beach asia">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach">
+      <div class="card-content">
+        <h3>Beach Time</h3>
+        <p>Sunsets and salt air.</p>
+      </div>
+    </div>
+
+    <div class="card" data-category="europe city">
+      <img src="Images/chateau.jpg" alt="Europe">
+      <div class="card-content">
+        <h3>Europe</h3>
+        <p>History meets elegance.</p>
+      </div>
+    </div>
+
+    <div class="card" data-category="asia nature">
+      <img src="Images/riz.jpg" alt="Asia">
+      <div class="card-content">
+        <h3>Asia</h3>
+        <p>Traditions & temples.</p>
+      </div>
+    </div>
+
+    <div class="card" data-category="africa nature">
+      <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b" alt="Africa">
+      <div class="card-content">
+        <h3>Africa</h3>
+        <p>Wild lands & warm souls.</p>
+      </div>
+    </div>
+
+    <div class="card" data-category="america mountains">
+      <img src="Images/USA.jpg" alt="America">
+      <div class="card-content">
+        <h3>Americas</h3>
+        <p>From Andes to NYC.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 EasyTravel — All rights reserved.
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        cards.forEach(card => {
+          const categories = card.getAttribute('data-category');
+          if (filter === 'all' || categories.includes(filter)) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

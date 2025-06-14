@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>New York - EasyTravel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #f8f5f2;
+      color: #3b2f2f;
+    }
+
+    header {
+      background-color: #fff8f4;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #8b3e2f;
+    }
+
+    .nav-links a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #5a3b2e;
+      font-weight: 500;
+    }
+
+    .nyc-banner {
+      background-image: url('Images/USA.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 6rem 2rem;
+      text-align: center;
+      color: white;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    }
+
+    .nyc-banner h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .nyc-banner p {
+      font-size: 1.2rem;
+    }
+
+    .intro-section {
+      padding: 2.5rem 2rem;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #5a3b2e;
+    }
+
+    .quote {
+      font-style: italic;
+      margin: 2rem auto;
+      color: #7a5a4e;
+    }
+
+    .places-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: #f1e7df;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      color: #7c4229;
+      margin: 1rem 0 0.5rem;
+    }
+
+    .card p {
+      padding: 0 1rem 1.5rem;
+    }
+
+    .testimonials {
+      background-color: #fff4ed;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .testimonials h2 {
+      color: #7c4229;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-style: italic;
+      color: #5a3b2e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background-color: #fff8f4;
+      color: #7a5a4e;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">EasyTravel</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#">Destinations</a>
+      <a href="#">Inspirations</a>
+    </div>
+  </header>
+
+  <section class="nyc-banner">
+    <h1>Experience New York</h1>
+    <p>The city that never sleeps</p>
+  </section>
+
+  <section class="intro-section">
+    <p>New York City is a vibrant mosaic of cultures, dreams, and stories. From Central Park to Times Square, every street tells a tale worth living.</p>
+    <div class="quote">“One belongs to New York instantly, one belongs to it as much in five minutes as in five years.” – Tom Wolfe</div>
+  </section>
+
+  <section class="places-grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1506377585622-bedcbb027afc" alt="Times Square">
+      <h3>Times Square</h3>
+      <p>Bright lights, big screens, and endless energy — this is the heartbeat of NYC.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05" alt="Central Park">
+      <h3>Central Park</h3>
+      <p>A green escape in the heart of Manhattan. Relax, walk, or boat in this iconic park.</p>
+    </div>
+    <div class="card">
+      <img src="Images/brooklyn.png" alt="Brooklyn Bridge">
+      <h3>Brooklyn Bridge</h3>
+      <p>Walk across history and enjoy amazing views of the skyline and East River.</p>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Travelers Say</h2>
+    <div class="testimonial">“Every corner of New York feels like a movie scene. I loved the energy.” – Sophie, France</div>
+    <div class="testimonial">“The food, the culture, the vibe... NYC is a dream come true.” – Marco, Italy</div>
+    <div class="testimonial">“It felt like the whole world in one city. I can't wait to return.” – Nia, Kenya</div>
+  </section>
+
+  <footer>
+    © 2025 EasyTravel — All rights reserved.
+  </footer>
+
+</body>
+</html>

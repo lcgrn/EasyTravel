@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tokyo - EasyTravel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #f8f5f2;
+      color: #3b2f2f;
+    }
+
+    header {
+      background-color: #fff8f4;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #8b3e2f;
+    }
+
+    .nav-links a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #5a3b2e;
+      font-weight: 500;
+    }
+
+    .tokyo-banner {
+      background-image: url('Images/riz.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 6rem 2rem;
+      text-align: center;
+      color: white;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    }
+
+    .tokyo-banner h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .tokyo-banner p {
+      font-size: 1.2rem;
+    }
+
+    .intro-section {
+      padding: 2.5rem 2rem;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #5a3b2e;
+    }
+
+    .quote {
+      font-style: italic;
+      margin: 2rem auto;
+      color: #7a5a4e;
+    }
+
+    .places-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: #f1e7df;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      color: #7c4229;
+      margin: 1rem 0 0.5rem;
+    }
+
+    .card p {
+      padding: 0 1rem 1.5rem;
+    }
+
+    .testimonials {
+      background-color: #fff4ed;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .testimonials h2 {
+      color: #7c4229;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-style: italic;
+      color: #5a3b2e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background-color: #fff8f4;
+      color: #7a5a4e;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">EasyTravel</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#">Destinations</a>
+      <a href="#">Inspirations</a>
+    </div>
+  </header>
+
+  <section class="tokyo-banner">
+    <h1>Welcome to Tokyo</h1>
+    <p>Where tradition meets the future</p>
+  </section>
+
+  <section class="intro-section">
+    <p>Explore Tokyo, a city of contrasts and colors. From peaceful temples to neon-lit streets, Tokyo is full of wonder and unforgettable moments.</p>
+    <div class="quote">“Tokyo was an origami city folded over and over until something was made of virtually nothing.” – Christopher Barzak</div>
+  </section>
+
+  <section class="places-grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1" alt="Shibuya Crossing">
+      <h3>Shibuya Crossing</h3>
+      <p>The world's busiest pedestrian crossing – feel the energy of Tokyo flow around you.</p>
+    </div>
+    <div class="card">
+      <img src="Images/templetokyo.png" alt="Senso-ji Temple">
+      <h3>Senso-ji Temple</h3>
+      <p>Tokyo's oldest temple, a peaceful place with rich history and vibrant traditions.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c" alt="Tokyo Tower">
+      <h3>Tokyo Tower</h3>
+      <p>Enjoy panoramic views of the city from this iconic red and white tower.</p>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Travelers Say</h2>
+    <div class="testimonial">“Tokyo is the perfect mix of serenity and madness. I’ve never felt so alive.” – Emma, UK</div>
+    <div class="testimonial">“I loved discovering both sushi bars and quiet gardens. Tokyo made me dream.” – Carlos, Spain</div>
+    <div class="testimonial">“Efficient, exciting, and so clean! A must-visit for every explorer.” – Amina, Morocco</div>
+  </section>
+
+  <footer>
+    © 2025 EasyTravel — All rights reserved.
+  </footer>
+
+</body>
+</html>
