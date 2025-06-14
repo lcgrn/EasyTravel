@@ -58,7 +58,7 @@ header {
 /* HERO */
 /* Hero Section */
 .hero {
-  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+  background: url('Images/riz.jpg') center/cover no-repeat;
   padding: 120px 20px;
   text-align: center;
   color: white;
@@ -192,7 +192,7 @@ header {
 
 /* BOOKING */
 .booking-banner {
-  background-image: url('Images/visualsofdana-T5pL6ciEn-I-unsplash.jpg');
+  background-image: url('Images/chambrebali.png');
   background-size: cover;
   background-position: center;
   color: white;
@@ -208,7 +208,7 @@ header {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
   z-index: 0;
 }
 
