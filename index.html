@@ -3,88 +3,229 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EasyTravel</title>
+  <title>EasyTravel - Your Journey Begins Here</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <div class="logo">EasyTravel</div>
-    <div class="nav-right">
-      <a href="flight.php">Flight</a>
+    <nav class="nav-right">
+      <a href="flight.php">Flights</a>
       <a href="inspiration.html">Inspirations</a>
-      <button onclick="window.location.href='login.html'">Log in</button>
-      <a href="about.html">About us</a>
-    </div>
+      <button class="login-btn" onclick="window.location.href='login.php'">Log In</button>
+      <a href="about.html">About Us</a>
+    </nav>
   </header>
 
+  <!-- Hero Section with enhanced overlay -->
   <section class="hero">
-    <h1>Travel as you wish</h1>
-    <p>Tailor-made suggestions according to the season, your tastes, and your budget</p>
-    <div class="search-box">
-      <input type="text" placeholder="Where do you want to go?">
-      <button >Search</button>
+    <div class="hero-content">
+      <div class="hero-badge">✈️ Discover the World</div>
+      <h1>Travel as you wish</h1>
+      <p class="hero-subtitle">Tailor-made suggestions according to the season, your tastes, and your budget</p>
+      
+      <div class="search-container">
+        <div class="search-box">
+          <div class="search-input-wrapper">
+            <input type="text" placeholder="Where would you like to go?">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M21 21L16.514 16.506M19 10.5C19 15.194 15.194 19 10.5 19S2 15.194 2 10.5 5.806 2 10.5 2 19 5.806 19 10.5Z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <button class="search-btn">Explore</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scroll-indicator">
+      <div class="scroll-arrow"></div>
     </div>
   </section>
 
+  <!-- Trust Indicators -->
+  <section class="trust-section">
+    <div class="trust-container">
+      <div class="trust-item">
+        <div class="trust-number">500+</div>
+        <span>Destinations</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-number">10K+</div>
+        <span>Happy Travelers</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-number">24/7</div>
+        <span>Support</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-number">15+</div>
+        <span>Years Experience</span>
+      </div>
+    </div>
+  </section>
 
-  <!-- ✨ NEW - Popular Destinations -->
+  <!-- Popular Destinations with enhanced cards -->
   <section class="popular-destinations">
-    <h2>Popular Destinations</h2>
+    <div class="section-header">
+      <h2>Popular Destinations</h2>
+      <p>Handpicked locations for your next adventure</p>
+    </div>
+    
     <div class="dest-grid">
-      <div class="dest-card"onclick="window.location.href='paris.html'" style="cursor:pointer;">
-        <img src="Images/montmartre.png" alt="Paris">
-        <h3>Paris</h3>
+      <div class="dest-card" onclick="window.location.href='paris.html'">
+        <div class="dest-image">
+          <img src="Images/montmartre.png" alt="Paris, France" loading="lazy">
+          <div class="dest-overlay">
+            <div class="dest-price">From €299</div>
+          </div>
+        </div>
+        <div class="dest-content">
+          <h3>Paris</h3>
+          <p class="dest-country">France</p>
+          <div class="dest-features">
+            <span class="feature-tag">Culture</span>
+            <span class="feature-tag">Romance</span>
+          </div>
+        </div>
       </div>
-      <div class="dest-card"onclick="window.location.href='tokyo.html'" style="cursor:pointer;">
-        <img src="Images/tokyo.png" alt="Tokyo">
-        <h3>Tokyo</h3>
+      
+      <div class="dest-card" onclick="window.location.href='tokyo.html'">
+        <div class="dest-image">
+          <img src="Images/tokyo.png" alt="Tokyo, Japan" loading="lazy">
+          <div class="dest-overlay">
+            <div class="dest-price">From €599</div>
+          </div>
+        </div>
+        <div class="dest-content">
+          <h3>Tokyo</h3>
+          <p class="dest-country">Japan</p>
+          <div class="dest-features">
+            <span class="feature-tag">Modern</span>
+            <span class="feature-tag">Cuisine</span>
+          </div>
+        </div>
       </div>
-      <div class="dest-card"onclick="window.location.href='newyork.html'" style="cursor:pointer;"">
-        <img src="Images/newyork.png" alt="New York">
-        <h3>New York</h3>
+      
+      <div class="dest-card" onclick="window.location.href='newyork.html'">
+        <div class="dest-image">
+          <img src="Images/newyork.png" alt="New York, USA" loading="lazy">
+          <div class="dest-overlay">
+            <div class="dest-price">From €449</div>
+          </div>
+        </div>
+        <div class="dest-content">
+          <h3>New York</h3>
+          <p class="dest-country">United States</p>
+          <div class="dest-features">
+            <span class="feature-tag">Urban</span>
+            <span class="feature-tag">Arts</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Existing Highlights Section -->
-  <section class="section">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba" alt="Cabin">
-      <h3>Custom trips</h3>
+  <!-- Services Section with better design -->
+  <section class="services-section">
+    <div class="section-header">
+      <h2>Why Choose EasyTravel?</h2>
+      <p>We make your travel dreams come true with personalized service</p>
     </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Sunset">
-      <h3>A world of services</h3>
-    </div>
-    <div class="card">
-      <img src="Images/bali.jpg" alt="Palm beach">
-      <h3>Where, when, how you want</h3>
-    </div>
-  </section>
-
-  <!-- Hotel Banner (conserved) -->
-  <section class="booking-banner hotel-banner">
-    <div class="hotel-banner-content">
-      <h2>Plan your perfect stay</h2>
-      <p>Discover top-rated hotels at the best prices for your next trip</p>
-      <div class="hotel-buttons">
-        <button onclick="window.location.href='hotel.php'">Our Best Hotels</button>
-        <button onclick="window.location.href='hotels_prix_nuit.php'">Best Price/Night</button>
-        <button onclick="window.location.href='book_now.php'">Book Now</button>
+    
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🎯</div>
+        <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba" alt="Custom trips" loading="lazy">
+        <div class="service-content">
+          <h3>Custom Trips</h3>
+          <p>Every journey is tailored specifically to your preferences and dreams</p>
+        </div>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">🌍</div>
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="World services" loading="lazy">
+        <div class="service-content">
+          <h3>A World of Services</h3>
+          <p>From flights to accommodations, we handle every detail of your trip</p>
+        </div>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">⏰</div>
+        <img src="Images/bali.jpg" alt="Flexible travel" loading="lazy">
+        <div class="service-content">
+          <h3>Where, When, How You Want</h3>
+          <p>Complete flexibility to travel on your terms, at your pace</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Sign Up CTA -->
-  <section class="register-section">
-    <h2>New here?</h2>
-    <p>Register now and start planning your next adventure!</p>
-    <button onclick="window.location.href='register.html'">Sign Up</button>
+  <!-- Enhanced Hotel Banner -->
+  <section class="booking-banner">
+    <div class="booking-overlay"></div>
+    <div class="booking-content">
+      <div class="booking-badge">🏨 Premium Stays</div>
+      <h2>Plan Your Perfect Stay</h2>
+      <p>Discover hand-selected hotels at the best prices for your next adventure</p>
+      <div class="booking-buttons">
+        <button class="btn-primary" onclick="window.location.href='hotel.php'">
+          <span>Our Best Hotels</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+        <button class="btn-secondary" onclick="window.location.href='hotels_prix_nuit.php'">Best Price/Night</button>
+        <button class="btn-secondary" onclick="window.location.href='book_now.php'">Book Now</button>
+      </div>
+    </div>
   </section>
 
-  <footer class="simple-footer">
-    © 2025 EasyTravel — All right reserved.
+  <!-- Enhanced CTA Section -->
+  <section class="cta-section">
+    <div class="cta-container">
+      <div class="cta-content">
+        <h2>Ready to Start Your Journey?</h2>
+        <p>Join thousands of travelers who trust EasyTravel for their perfect getaway</p>
+        <div class="cta-buttons">
+          <button class="cta-primary" onclick="window.location.href='register.php'">
+            Create Account
+            <span class="btn-shine"></span>
+          </button>
+          <button class="cta-secondary" onclick="window.location.href='inspiration.html'">
+            Get Inspired
+          </button>
+        </div>
+      </div>
+      <div class="cta-visual">
+        <div class="floating-card">
+          <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828" alt="Travel planning" loading="lazy">
+          <div class="card-content">
+            <h4>Your Next Adventure</h4>
+            <p>Awaits you...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="enhanced-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">EasyTravel</div>
+        <p>Making travel dreams come true since 2010</p>
+      </div>
+      <div class="footer-links">
+        <a href="inspiration.html">Inspirations</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 EasyTravel — All rights reserved.
+    </div>
   </footer>
 </body>
 </html>
